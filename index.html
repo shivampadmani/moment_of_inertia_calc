@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title></title>
+    <title>Moment of Inertia Calculator</title>
+   
   </head>
   <body>
     <p style="text-align: center; height: 33px;"><font size="45" color="red"><marquee>Welcome
@@ -10,17 +11,29 @@
     <p style="text-align: left;"><br>
     </p>
     Select The Cross Section of your choice:&nbsp;
-    <select>
-      <option>Rectangular</option>
-      <option>Hollow Rectangular</option>
-      <option>Circular</option>
-      <option>Hollow Circular</option>
-      <option>I- Section</option>
-      <option>T-Section</option>
-      <option>L-Section</option>
-      <option>Triangular</option>
-      <option>Channel</option>
-    </select>
-    
+<div float="right">
+    <img height=300 width=300 id="imageToSwap" src="images/welcome.jpg" />
+    </div>
+<br/><br/>
+
+<select id="dlist" onChange="swapImage()">
+<option value="images/TBeam.png">T Section</option>
+<option value="images/HCircular2.png">Hollow Circular</option>
+<option value="images/IBeam.png">I Section</option>
+<option value="images/HRectangular.png">Hollow Rectangular</option>
+<option value="images/Circular.png">Circular</option>
+<option value="images/Triangular.png">Triangular</option>
+<option value="images/Rectangular.png">Rectangular</option>
+<option value="images/CSection.png">Channel</option>
+<option value="images/LBeam2.png">L Section</option>
+</select>
+<script type="text/javascript">
+
+  function swapImage(){
+    var image = document.getElementById("imageToSwap");
+    var dropd = document.getElementById("dlist");
+    image.src = dropd.value;	
+  };
+  </script>
   </body>
 </html>
