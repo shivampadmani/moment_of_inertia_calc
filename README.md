@@ -2,3 +2,4 @@
 
 #This is online calculater for Moment Moment of Inertia.
 ##This is Assignment for Mechanics of Solids software.
+
