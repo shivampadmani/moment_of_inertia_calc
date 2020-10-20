@@ -6,12 +6,12 @@ function swapImage(){
 };
 
 
-function TBeam(Tfw,TFt,Wt,Wh){
+function TBeam(TFw,TFt,Wt,Wh){
 	var Area;
-	if(Tfw==undefined||TFt==undefined||Wt==undefined||Wh==undefined){
+	if(TFw==undefined||TFt==undefined||Wt==undefined||Wh==undefined){
 		alert:"Please Enter Diameter";
 	}
-Area=(TFt*Tfw)+(Wh*Wt);
+Area=(TFt*TFw)+(Wh*Wt);
 }
 function HCircular(d,D){
 	var Area;
@@ -20,12 +20,12 @@ function HCircular(d,D){
 	}
 Area=3.14*((D*D)-(d*d));
 }
-function IBeam(Tfw,TFt,Wt,Wh,BFt,BFw){
+function IBeam(TFw,TFt,Wt,Wh,BFt,BFw){
 	var Area;
-	if(Tfw==undefined||TFt==undefined||Wt==undefined||Wh==undefined||BFt==undefined||BFw==undefined){
+	if(TFw==undefined||TFt==undefined||Wt==undefined||Wh==undefined||BFt==undefined||BFw==undefined){
 		alert:"Please Enter Diameter";
 	}
-Area=(TFt*Tfw)+(Wh*Wt)+(BFt*BFw);
+Area=(TFt*TFw)+(Wh*Wt)+(BFt*BFw);
 }
 function HRectangle(h,h1,b,b1){
 	var Area;
@@ -63,18 +63,18 @@ function Rectangular(h,b){
 Area=(h*b);
 }
 
-function CSection(Tfw,TFt,Wt,h,BFt,BFw){
+function CSection(TFw,TFt,Wt,h,BFt,BFw){
 	var Area;
-	if(Tfw==undefined||TFt==undefined||Wt==undefined||h==undefined||BFt==undefined||BFw==undefined){
+	if(TFw==undefined||TFt==undefined||Wt==undefined||h==undefined||BFt==undefined||BFw==undefined){
 			alert:"Please Enter Diameter";
 		}
-	Area=(TFt*Tfw)+(h*Wt)+(BFt*BFw);
+	Area=(TFt*TFw)+(h*Wt)+(BFt*BFw);
 	}
 	
-	function CSection(Lfh,LFt,BFt,BFw){
+	function CSection(LFh,LFt,BFt,BFw){
 		var Area;
 		if(Lfh==undefined||LFt==undefined||BFt==undefined||BFw==undefined){
 			alert:"Please Enter Diameter";
 		}
-	Area=(LFt*Lfh)+(BFt*BFw);
+	Area=(LFt*LFh)+(BFt*BFw);
 	}
