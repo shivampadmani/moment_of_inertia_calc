@@ -12,7 +12,7 @@ function TBeam(TFw,TFt,Wt,Wh){
 		alert:"Please Enter a Valid input";
 	}
 Area=(TFt*TFw)+(Wh*Wt);
-Cx=(Tfw/2);
+Cx=0;
 Cy=((TFt*(TFt*TFw)/2)+(Wh*(Wh*Wt)/2))/Area;
 }
 function HCircular(d,D){
@@ -21,6 +21,8 @@ function HCircular(d,D){
 		alert:"Please Enter a Valid input";
 	}
 Area=3.14*((D*D)-(d*d));
+Cx=0;
+Cy=0;
 }
 function IBeam(TFw,TFt,Wt,Wh,BFt,BFw){
 	var Area, Cx, Cy;
@@ -28,6 +30,8 @@ function IBeam(TFw,TFt,Wt,Wh,BFt,BFw){
 		alert:"Please Enter a Valid input";
 	}
 Area=(TFt*TFw)+(Wh*Wt)+(BFt*BFw);
+Cx=0;
+Cy=((TFt*(TFt*TFw)/2)+(Wh*(Wh*Wt)/2)+(BFt*(BFt*BFw)/2))/Area;
 }
 function HRectangle(h,h1,b,b1){
 	var Area, Cx, Cy;
@@ -35,6 +39,8 @@ function HRectangle(h,h1,b,b1){
 		alert:"Please Enter a Valid input";
 	}
 Area=(h*b)-(h1*b1);
+Cx=b/2;
+Cy=h/2;
 }
 function Circular(D){
 	var Area, Cx, Cy;
@@ -42,13 +48,8 @@ function Circular(D){
 		alert:"Please Enter a Valid input";
 	}
 Area=3.14*D*D;
-}
-function Triangular(h,b){
-	var Area, Cx, Cy;
-	if(h==undefined||b==undefined){
-		alert:"Please Enter a Valid input";
-	}
-Area=(h*b)/2;
+Cx=0;
+Cy=0;
 }
 function Triangular(h,b){
 	var Area, Cx, Cy;
@@ -73,7 +74,7 @@ function CSection(TFw,TFt,Wt,h,BFt,BFw){
 	Area=(TFt*TFw)+(h*Wt)+(BFt*BFw);
 	}
 	
-	function CSection(LFh,LFt,BFt,BFw){
+	function LSection(LFh,LFt,BFt,BFw){
 		var Area, Cx, Cy;
 		if(Lfh==undefined||LFt==undefined||BFt==undefined||BFw==undefined){
 			alert:"Please Enter a Valid input";
