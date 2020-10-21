@@ -64,6 +64,8 @@ function Rectangular(h,b){
 		alert:"Please Enter a Valid input";
 	}
 Area=(h*b);
+Cx=b/2;
+Cy=h/2;
 }
 
 function CSection(TFw,TFt,Wt,h,BFt,BFw){
@@ -72,6 +74,8 @@ function CSection(TFw,TFt,Wt,h,BFt,BFw){
 			alert:"Please Enter a Valid input";
 		}
 	Area=(TFt*TFw)+(h*Wt)+(BFt*BFw);
+	Cx=((TFw*(TFt*TFw)/2)+(Wt*(h*Wt)/2)+(BFw*(BFt*BFw)/2))/Area;
+	Cy=((TFt*(TFt*TFw)/2)+(h*(h*Wt)/2)+(BFt*(BFt*BFw)/2))/Area;
 	}
 	
 	function LSection(LFh,LFt,BFt,BFw){
@@ -80,4 +84,6 @@ function CSection(TFw,TFt,Wt,h,BFt,BFw){
 			alert:"Please Enter a Valid input";
 		}
 	Area=(LFt*LFh)+(BFt*BFw);
-	}
+	Cx=((LFt*(LFt*LFh)/2)+(BFw*(BFt*BFw)/2))/Area;
+	Cy=((LFh*(LFt*LFh)/2)+(BFt*(BFt*BFw)/2))/Area;	
+}
