@@ -12,6 +12,8 @@ function TBeam(TFw,TFt,Wt,Wh){
 		alert:"Please Enter a Valid input";
 	}
 Area=(TFt*TFw)+(Wh*Wt);
+Cx=(Tfw/2);
+Cy=((TFt*(TFt*TFw)/2)+(Wh*(Wh*Wt)/2))/Area;
 }
 function HCircular(d,D){
 	var Area, Cx, Cy;
