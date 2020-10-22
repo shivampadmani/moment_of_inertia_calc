@@ -12,7 +12,7 @@
   padding: 5px 20px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: inline-block;  
   font-size: 16px;
   
 }
@@ -48,8 +48,8 @@
 </style>
   </head>
   <body>
-    <p style="text-align: center; height: 33px;"><font size="45" color="red"><marquee>Welcome
-          to Moment of Inertia Calculator</marquee></font></p>
+    <p style="text-align: center; height: 33px;"><marquee>Welcome
+          to Moment of Inertia Calculator</marquee></p>
     <p style="text-align: left;"><br>
     </p>
     Select The Cross Section of your choice:&nbsp;
@@ -57,15 +57,14 @@
     <img height=300 width=300 id="imageToSwap" src="images/welcome.jpg" />
     </div>
 <br/><br/>
-
 <select id="dlist" onChange="swapImage()">
+<option value="images/Rectangular.png">Rectangular</option>
 <option value="images/TBeam.png">T Section</option>
 <option value="images/HCircular2.png">Hollow Circular</option>
 <option value="images/IBeam.png">I Section</option>
 <option value="images/HRectangular.png">Hollow Rectangular</option>
 <option value="images/Circular.png">Circular</option>
 <option value="images/Triangular.png">Triangular</option>
-<option value="images/Rectangular.png">Rectangular</option>
 <option value="images/CSection.png">Channel</option>
 <option value="images/LBeam2.png">L Section</option>
 </select>

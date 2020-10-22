@@ -4,7 +4,7 @@ function swapImage(){
 	var dropd = document.getElementById("dlist");
 	image.src = dropd.value;	
 };
-
+/*
 
 function TBeam(TFw,TFt,Wt,Wh){
 	var Area, Cx, Cy,Ixx,Iyy;
@@ -106,4 +106,4 @@ function CSection(TFw,TFt,Wt,h,BFt,BFw){
 	Cy=((LFh*(LFt*LFh)/2)+(BFt*(BFt*BFw)/2))/Area;	
 	Ixx=
 	Iyy=
-}
+}*/
