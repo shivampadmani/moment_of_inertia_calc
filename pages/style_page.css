@@ -1,0 +1,17 @@
+/* Fields */
+ input {
+   background-color: #eee; /* Fill color */
+}
+/* Button */
+input {
+   border-radius: 5px; /* Rounded button edges */
+   width: 200px; /* Width and height must match */
+   height: 30px;
+}
+table {
+    table-layout: auto;
+    border-radius: 2px;
+    border-color: orange;
+    text-align: center;
+    width: 500px;
+}
