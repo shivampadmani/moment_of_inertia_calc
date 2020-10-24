@@ -1,5 +1,5 @@
 /* Fields */
- input {
+input {
    background-color: #eee; /* Fill color */
 }
 /* Button */
@@ -17,4 +17,13 @@ table {
 }
 #button {
 background-color: green;
+text-align: center;
+font-size: larger;
+
+}
+body{
+   background-color: pink;
+}
+img {
+   height: 300px;
 }

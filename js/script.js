@@ -4,6 +4,12 @@ function swapImage(){
 	var dropd = document.getElementById("dlist");
 	image.src = dropd.value;	
 };
+function changecolour(){
+	document.getElementById("showtable").style.backgroundColor= "red";
+}
+function revert(){
+	document.getElementById("showtable").style.backgroundColor="green";
+}
 /*
 
 function TBeam(TFw,TFt,Wt,Wh){

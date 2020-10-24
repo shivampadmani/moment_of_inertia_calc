@@ -4,52 +4,12 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>Moment of Inertia Calculator</title>
     <script src="js/script.js"></script><!--Linked javascript file to html-->
-    <style>
-      button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 5px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;  
-  font-size: 16px;
+    <link rel="stylesheet" href="css/style.css">
   
-}
-   select {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -webkit-padding-end: 20px;
-    -moz-padding-end: 20px;
-    -webkit-padding-start: 2px;
-    -moz-padding-start: 2px;
-    background-color: #c1e034ce; /* Fallback color if gradients are not supported */
-    background-image:  -webkit-linear-gradient(top, #E5E5E5, #F4F4F4); /* For Chrome and Safari */
-    background-image: -moz-linear-gradient(top, #E5E5E5, #F4F4F4); /* For old Firefox (3.6 to 15) */
-    background-image:-ms-linear-gradient(top, #E5E5E5, #F4F4F4); /* For pre-releases of Internet Explorer  10*/
-    background-image:  -o-linear-gradient(top, #E5E5E5, #F4F4F4); /* For old Opera (11.1 to 12.0) */
-    background-image:  linear-gradient(to bottom, #E5E5E5, #F4F4F4); /* Standard syntax; must be last */
-    background-position: center right;
-    background-repeat: no-repeat;
-    border: 1px solid #AAA;
-    border-radius: 2px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-    color: #555;
-    font-size: inherit;
-    margin: 0;
-    overflow: hidden;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-</style>
   </head>
   <body>
-    <p style="text-align: center; height: 33px;"><marquee>Welcome
-          to Moment of Inertia Calculator</marquee></p>
+    <h1 style="text-align: center; height: 33px;">Welcome
+          to Moment of Inertia Calculator</h1>
     <p style="text-align: left;"><br>
     </p>
     Select The Cross Section of your choice:&nbsp;
@@ -68,7 +28,7 @@
 <option value="images/CSection.png">Channel</option>
 <option value="images/LBeam2.png">L Section</option>
 </select>
-<button class="button" id="showtable">Show Table</button>
+<button onmouseover="changecolour()" onmouseout="revert()" class="button" id="showtable">Show Table</button>
 
   
   </body>
