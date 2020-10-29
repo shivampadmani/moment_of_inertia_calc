@@ -4,10 +4,9 @@ body {
   }
   
   h1 {
-    font-size: 5rem;
-    color: #DBEDF3;
+    color: #79c9e4;
     font-family: "Arvo", cursive;
-    text-shadow: 3px 0 #DA0463;
+    font size: 100px;
   }
   
   footer {
@@ -28,19 +27,13 @@ body {
     color: red;
   }
 
- #td1{
-   padding-left: 80px;
- }
- .td2{
-   padding-right: 70px;
-   align-self: auto;
-   
- }
+ 
+
 
   button {
     outline: none;
     border: 10px solid #33df6c;
-    font-size: 5rem;
+    font-size: 50px;
     font-family: 'Arvo'  ;
     line-height: 2;
     font-weight: 900;
@@ -48,8 +41,7 @@ body {
     text-shadow: 3px 0 #DBEDF3;
     border-radius: 15px;
     display: inline;
-    width: 150px;
-    height: 150px;
+   
     text-align: top;
     margin: 10px;
     background-image: linear-gradient(to right, purple   0%, rgb(235, 126, 235) 80%);
@@ -58,7 +50,7 @@ body {
   button:hover {
     outline: none;
     border: 10px solid #33df6c;
-    font-size: 5rem;
+    font-size: 50px;
     font-family: 'Arvo'  ;
     line-height: 2;
     font-weight: 900;
@@ -66,8 +58,6 @@ body {
     text-shadow: 3px 0 #DBEDF3;
     border-radius: 15px;
     display: inline;
-    width: 150px;
-    height: 150px;
     text-align: top;
     margin: 10px;
     background-image: linear-gradient(to right, rgba(43, 223, 43, 0.788)   0%, rgb(235, 215, 126) 80%);
