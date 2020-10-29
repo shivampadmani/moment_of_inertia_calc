@@ -1,35 +1,75 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>Moment of Inertia Calculator</title>
-    <script src="js/script.js"></script><!--Linked javascript file to html-->
-    <link rel="stylesheet" href="css/style.css">
-  
-  </head>
-  <body>
-    <h1 style="text-align: center; height: 33px;">Welcome
-          to Moment of Inertia Calculator</h1>
-    <p style="text-align: left;"><br>
-    </p>
-    Select The Cross Section of your choice:&nbsp;
-<div float="right">
-    <img height=300 width=300 id="imageToSwap" src="images/welcome.jpg" />
-    </div>
-<br/><br/>
-<select id="dlist" onChange="swapImage()">
-<option value="images/Rectangular.png">Rectangular</option>
-<option value="images/TBeam.png">T Section</option>
-<option value="images/HCircular2.png">Hollow Circular</option>
-<option value="images/IBeam.png">I Section</option>
-<option value="images/HRectangular.png">Hollow Rectangular</option>
-<option value="images/Circular.png">Circular</option>
-<option value="images/Triangular.png">Triangular</option>
-<option value="images/CSection.png">Channel</option>
-<option value="images/LBeam2.png">L Section</option>
-</select>
-<button onmouseover="changecolour()" onmouseout="revert()" class="button" id="showtable">Show Table</button>
+<html lang="en" dir="ltr">
 
-  
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Moment of Inertia</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+</head>
+
+<body>
+
+  <h1 id="title">area moment of inertia</h1>
+  <div class="set">
+    <table class="table">
+      <tr>
+        <td id="td1">
+          <form action="pages/C_section.html">
+            <button onmouseover="glow()" type="submit" id="button" class="c drum">c</button>
+          </form>
+        </td>
+        <td id="td1">
+          <form action="pages/circular.html">
+            <button type="submit" class="cs drum">C</button>
+          </form>
+        </td>
+        <td id="td1">
+          <form action="pages/hollow_circular.html">
+            <button type="submit" class="hc drum">h</button> </form>
+        </td>
+        <td id="td1">
+          <form action="pages/hollow_rectangular.html">
+            <button type="submit" class="hr drum">H</button>
+          </form>
+        </td>
+        <td id="td1">
+          <form action="pages/I_section.html">
+            <button type="submit" class="IB drum">I</button>
+          </form>
+        </td>
+      </tr>
+    </table>
+    <table>
+      <tr id="tr2">
+        <td class="td2">
+          <form action="pages/L_section.html">
+            <button type="submit" class="Lb drum">L</button>
+          </form>
+        </td>
+        <td class="td2">
+          <form action="pages/Rectangular.html">
+            <button type="submit" class="R drum">R</button>
+          </form>
+        </td>
+        <td class="td2">
+          <form action="pages/T_section.html">
+            <button type="submit" class="Tb drum">T</button>
+          </form>
+        </td>
+        <td class="td2">
+          <form action="pages/Triangular.html">
+            <button type="submit" class="Tr drum">t</button>
+          </form>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <script src="index.js"></script>
+  <footer>
+    Made with ❤️ in India.
+  </footer>
+</body>
+
 </html>

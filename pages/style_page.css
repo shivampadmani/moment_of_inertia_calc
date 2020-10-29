@@ -1,6 +1,18 @@
 /* Fields */
-input {
+ input {
    background-color: #eee; /* Fill color */
+}
+.zoom {
+  padding: 50px;
+  background-color: transparent;
+  transition: transform .2s; /* Animation */
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.5);
 }
 /* Button */
 input {
@@ -17,13 +29,10 @@ table {
 }
 #button {
 background-color: green;
-text-align: center;
-font-size: larger;
 
 }
-body{
-   background-color: pink;
-}
-img {
-   height: 300px;
-}
+#button:hover {
+   background-color: orange;
+   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+   cursor: pointer;
+   }
