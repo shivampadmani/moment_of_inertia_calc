@@ -38,9 +38,15 @@ function HCircular() {
 	document.getElementById("cog-y").innerHTML = Cy + "  m";
 	document.getElementById("moi-xx").innerHTML = Ixx + "  m^4";
 	document.getElementById("moi-yy").innerHTML = Iyy + "  m^4";
-}/*
+}
 //----------------------------------------------------------------------------------------------------
-function IBeam(TFw, TFt, Wt, Wh, BFt, BFw) {
+function IBeam() {
+	var TFw = document.getElementById("TFw").value;
+	var TFt = document.getElementById("TFt").value;
+	var Wt = document.getElementById("Wt").value;
+	var Wh = document.getElementById("Wh").value;
+	var BFt = document.getElementById("BFt").value;
+	var BFw = document.getElementById("BFw").value;
 	var Area, Cx, Cy, Ixx, Iyy;
 	if (TFw == undefined || TFt == undefined || Wt == undefined || Wh == undefined || BFt == undefined || BFw == undefined) {
 		alert: "Please Enter a Valid input";
@@ -48,9 +54,14 @@ function IBeam(TFw, TFt, Wt, Wh, BFt, BFw) {
 	Area = (TFt * TFw) + (Wh * Wt) + (BFt * BFw);
 	Cx = 0;
 	Cy = ((TFt * (TFt * TFw) / 2) + (Wh * (Wh * Wt) / 2) + (BFt * (BFt * BFw) / 2)) / Area;
-	Ixx = (Wt * Wh ^ 3) / 12 + BFt ^ 3 * BFw / 12 + TFt ^ 3 * TFw / 12 - (Wh ^ 3 * (TFw / 2 - Wt / 2)) / 6;
-	Iyy = (TFw ^ 3 * TFt + Wt ^ 3 * Wh + BFw ^ 3 * BFt) / 12;
-}*/
+	Ixx = (Wt * Wh*Wh*Wh) / 12 + (BFt*BFt*BFt * BFw )/ 12 + (TFt*TFt*TFt* TFw )/ 12 - (Wh*Wh*Wh* (TFw / 2 - Wt / 2)) / 6;
+	Iyy = ((TFw*TFw*TFw* TFt) + (Wt*Wt*Wt* Wh )+ (BFw*BFw*BFw * BFt)) / 12;
+	document.getElementById("area").innerHTML = Area + "  m^2";
+	document.getElementById("cog-x").innerHTML = Cx + "  m";
+	document.getElementById("cog-y").innerHTML = Cy + "  m";
+	document.getElementById("moi-xx").innerHTML = Ixx + "  m^4";
+	document.getElementById("moi-yy").innerHTML = Iyy + "  m^4";
+}
 //----------------------------------------------------------------------------------------------------
 function HRectangular() {
 	var h = document.getElementById("h").value;
