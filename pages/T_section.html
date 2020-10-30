@@ -6,83 +6,106 @@
   </head>
   <body>
     <div id="fullbody">
-      <p><img class="zoom" src="../images/TBeam.png" alt="T Section" title="T section"></p>
-      <table class="table">
-        <tbody>
-          <tr>
-            <td>Dimension Name</td>
-            <td>Value in mm</td>
-          </tr>
-          <tr>
-            <td>TFw</td>
-            <td><input id="TFw" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+    <p><img class="zoom" src="../images/TBeam.png"
 
-                 type="number"><br>
-            </td>
-          </tr>
-          <tr>
-            <td>TFt</td>
-            <td><input id="TFt" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
-
-                 type="number"><br>
-            </td>
-          </tr>
-          <tr>
-            <td>Wh</td>
-            <td><input id="Wh" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
-
-                 type="number"><br>
-            </td>
-          </tr>
-          <tr>
-            <td>Wt</td>
-            <td><input id="Wt" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
-
-                 type="number"><br>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <input name="submit" id="button" value="Calculate" formtarget="_top" type="submit" onclick="TBeam()">
-      <table id="solution">
-        <tbody>
-          <tr id="tr">
-            <td> <b>
-                <p>Area</p>
-              </b> </td>
-            <td> <b> </b> <br>
-            </td>
-          </tr>
-          <tr id="tr">
-            <td> <b>
-                <p>Center of Gravity x-coordinate</p>
-              </b> </td>
-            <td> <b> </b> <br>
-            </td>
-          </tr>
-          <tr id="tr">
-            <td> <b>
-                <p>Center of Gravity y-coordinate</p>
-              </b> </td>
-            <td> <b> </b> <br>
-            </td>
-          </tr>
-          <tr id="tr">
-            <td> <b>
-                <p>Moment of Inertia about xx Centroidal Axis</p>
-              </b> </td>
-            <td> <b> </b> <br>
-            </td>
-          </tr>
-          <tr id="tr">
-            <td> <b>
-                <p>Moment of Inertia about yy Centroidal Axis</p>
-              </b> </td>
-            <td> <b> </b> <br>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <script src="script.js"></script> </div>
+        alt="T Section" title="T section"></p>
+    <table class="table">
+      <tbody>
+        <tr>
+          <td>Dimension Name</td>
+          <td>Value</td>
+        </tr>
+        <tr>
+          <td>TFw</td>
+          <td><input  id="TFw" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  type="text"><br>
+          </td>
+        </tr>
+        <tr>
+          <td>TFt</td>
+          <td><input id="TFt"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" type="text"><br>
+          </td>
+        </tr>
+        <tr>
+          <td>Wh</td>
+          <td><input  id="Wh" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" type="text"><br>
+          </td>
+        </tr>
+        <tr>
+          <td>Wt</td>
+          <td><input  id="Wt" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  type="text"><br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <input name="Submit" id="button"  value="Calculate" type="submit" onclick="TBeam()" >
+    <table id="solution">
+      <tr id="tr">
+        <td>
+          <b>
+            <p>Area</p>
+          </b>
+        </td>
+        <td>
+          <b>
+            <p id="area"></p>
+          </b>
+        </td>
+      </tr>
+  
+      <tr id="tr">
+        <td>
+          <b>
+            <p>Center of Gravity x-coordinate</p>
+          </b>
+        </td>
+        <td>
+          <b>
+            <p id="cog-x"></p>
+          </b>
+        </td>
+      </tr>
+  
+      <tr id="tr">
+        <td>
+          <b>
+            <p>Center of Gravity y-coordinate</p>
+          </b>
+        </td>
+        <td>
+          <b>
+            <p id="cog-y"></p>
+          </b>
+        </td>
+      </tr>
+  
+      <tr id="tr">
+        <td>
+          <b>
+            <p>Moment of Inertia about xx Centroidal Axis</p>
+          </b>
+        </td>
+        <td>
+          <b>
+            <p id="moi-xx"></p>
+          </b>
+        </td>
+      </tr>
+  
+      
+      <tr id="tr">
+        <td>
+          <b>
+            <p>Moment of Inertia about yy Centroidal Axis</p>
+          </b>
+        </td>
+        <td>
+          <b>
+            <p id="moi-yy"></p>
+          </b>
+        </td>
+      </tr>
+    </table>
+    <script src="script.js"></script>
+    </div>
   </body>
 </html>

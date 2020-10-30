@@ -9,16 +9,16 @@ function TBeam() {
 	if (TFw == undefined || TFt == undefined || Wt == undefined || Wh == undefined) {
 		alert: "Please Enter a Valid input";
 	}
-	//Area = (TFt * TFw) + (Wh * Wt);
+	Area = (TFt * TFw) + (Wh * Wt);
 	Cx = TFw / 2;
-	//Cy = ((TFt * (TFt * TFw) / 2) + (Wh * (Wh * Wt) / 2)) / Area;
-	//Ixx = (Wt * Wh * (Cy - Wh / 2)*(Cy - Wh / 2)) + (Wt * Wh *Wh*Wh) / 12 + TFw * TFt * (Wh + TFt - Cy)*2 + (TFt*TFt*TFt) * TFw / 12;
-	//Iyy = (Wh * Wt ^ 3 + TFw ^ 3 * TFt) / 12;
-	//document.getElementById("area").innerHTML = Area + "  m^2";
+	Cy = ((TFt * (TFt * TFw) / 2) + (Wh * (Wh * Wt) / 2)) / Area;
+	Ixx = (Wt * Wh * (Cy - Wh / 2)*(Cy - Wh / 2)) + (Wt * Wh *Wh*Wh) / 12 + TFw * TFt * (Wh + TFt - Cy)*2 + (TFt*TFt*TFt) * TFw / 12;
+	Iyy = (Wh * Wt ^ 3 + TFw ^ 3 * TFt) / 12;
+	document.getElementById("area").innerHTML = Area + "  m^2";
 	document.getElementById("cog-x").innerHTML = Cx + "  m";
-	//document.getElementById("cog-y").innerHTML = Cy + "  m";
-	//document.getElementById("moi-xx").innerHTML = Ixx + "  m^4";
-	//document.getElementById("moi-yy").innerHTML = Iyy + "  m^4";
+	document.getElementById("cog-y").innerHTML = Cy + "  m";
+	document.getElementById("moi-xx").innerHTML = Ixx + "  m^4";
+	document.getElementById("moi-yy").innerHTML = Iyy + "  m^4";
 }
 //----------------------------------------------------------------------------------------------------*/
 function HCircular() {
