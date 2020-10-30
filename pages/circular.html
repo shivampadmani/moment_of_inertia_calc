@@ -1,26 +1,98 @@
 <html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
-    <title> Circular Beam </title>
-    <link rel="stylesheet" href="style_page.css">
-  </head>
-  <body>
-    <p><img class="zoom" src="../images/Circular.png"
 
-        alt="Circular" title="Circular"></p>
-    <table class="table">
-      <tbody>
-        <tr>
-          <td>Dimension Name </td>
-          <td>Value</td>
-        </tr>
-        <tr>
-          <td>D</td>
-          <td><input name="D" value="enter value in meters" type="number"><br>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <input name="submit" id="button"  value="Calculate" formtarget="_top" type="submit">
-  </body>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+  <title> Circular Beam </title>
+  <link rel="stylesheet" href="style_page.css">
+</head>
+
+<body>
+  <div id="fullbody">
+  <p><img class="zoom" id="img" src="../images/Circular.png" alt="Circular" title="Circular"></p>
+  <table class="table">
+    <tbody>
+      <tr>
+        <td>Dimension Name </td>
+        <td>Value (in mm)</td>
+      </tr>
+      <tr>
+        <td>D</td>
+        <td>
+          <input id="D" type="text"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /><br>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <input name="submit" id="button" value="Calculate" formtarget="_top" type="submit" onclick="Circular()">
+  <script src="script.js"></script>
+  <table id="solution">
+    <tr id="tr">
+      <td>
+        <b>
+          <p>Area</p>
+        </b>
+      </td>
+      <td>
+        <b>
+          <p id="area"></p>
+        </b>
+      </td>
+    </tr>
+
+    <tr id="tr">
+      <td>
+        <b>
+          <p>Center of Gravity x-coordinate</p>
+        </b>
+      </td>
+      <td>
+        <b>
+          <p id="cog-x"></p>
+        </b>
+      </td>
+    </tr>
+
+    <tr id="tr">
+      <td>
+        <b>
+          <p>Center of GRavity y-coordinate</p>
+        </b>
+      </td>
+      <td>
+        <b>
+          <p id="cog-y"></p>
+        </b>
+      </td>
+    </tr>
+
+    <tr id="tr">
+      <td>
+        <b>
+          <p>Moment of Inertia about xx Centroidal Axis</p>
+        </b>
+      </td>
+      <td>
+        <b>
+          <p id="moi-xx"></p>
+        </b>
+      </td>
+    </tr>
+
+    
+    <tr id="tr">
+      <td>
+        <b>
+          <p>Moment of Inertia about yy Centroidal Axis</p>
+        </b>
+      </td>
+      <td>
+        <b>
+          <p id="moi-yy"></p>
+        </b>
+      </td>
+    </tr>
+  </table>
+</div>
+</body>
+
 </html>

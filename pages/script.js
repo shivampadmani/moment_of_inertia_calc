@@ -1,18 +1,4 @@
-
-function swapImage(){
-	var image = document.getElementById("imageToSwap");
-	var dropd = document.getElementById("dlist");
-	image.src = dropd.value;	
-};
-function changecolour(){
-	document.getElementById("showtable").style.backgroundColor= "red";
-}
-function revert(){
-	document.getElementById("showtable").style.backgroundColor="green";
-}
-/*
-
-function TBeam(TFw,TFt,Wt,Wh){
+/*function TBeam(TFw,TFt,Wt,Wh){
 	var Area, Cx, Cy,Ixx,Iyy;
 	if(TFw==undefined||TFt==undefined||Wt==undefined||Wh==undefined){
 		alert:"Please Enter a Valid input";
@@ -55,19 +41,25 @@ Cx=b/2;
 Cy=h/2;
 Ixx=(b*h^3/12)+(b1*h1^3/12);
 Iyy=(b^3*h/12)+(b1^3*h1/12);
-}
-function Circular(D){
+}*/
+function Circular(){
+	var D=document.getElementById("D").value;
 	var Area, Cx, Cy,Ixx,Iyy;
 	if(D==undefined){
 		alert:"Please Enter a Valid input";
 	}
-Area=3.14*D*D;
+Area=3.14*D*D/4;
 Cx=0;
 Cy=0;
-Ixx=0.098*D^4;
+Ixx=(3.14/64)*D*D*D*D;
 Iyy=Ixx;
+document.getElementById("area").innerHTML=Area +"  m^2";
+document.getElementById("cog-x").innerHTML=Cx + "  m";
+document.getElementById("cog-y").innerHTML=Cy + "  m";
+document.getElementById("moi-xx").innerHTML=Ixx + "  m^4";
+document.getElementById("moi-yy").innerHTML=Iyy +	"  m^4";
 }
-function Triangular(h,b){
+/*function Triangular(h,b){
 	var Area, Cx, Cy,Ixx,Iyy;
 	if(h==undefined||b==undefined){
 		alert:"Please Enter a Valid input";

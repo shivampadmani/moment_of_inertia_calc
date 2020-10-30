@@ -1,10 +1,13 @@
 body {
-    text-align: center;
     background-color: #283149;
+  }
+h2{
+  color: aliceblue;
   }
   
   h1 {
     color: #79c9e4;
+    text-align: center;
     font-family: "Arvo", cursive;
     font size: 100px;
   }
@@ -12,6 +15,7 @@ body {
   footer {
     color: #DBEDF3;
     font-family: sans-serif;
+    text-align: center;
   }
   footer:hover{
    font-size: x-large;
@@ -28,7 +32,9 @@ body {
   }
 
  
-
+table .solution{
+border: 2px;
+}
 
   button {
     outline: none;
