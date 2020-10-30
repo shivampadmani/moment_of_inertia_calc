@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="style_page.css">
   </head>
   <body>
+    <div id="fullbody">
     <p><img  class="zoom"  src="../images/IBeam.png"
 
         alt="I section" title="I section"></p>
@@ -16,37 +17,105 @@
         </tr>
         <tr>
           <td>TFw</td>
-          <td><input  name="TFw" value="Enter Value in Meters" type="number"><br>
+          <td><input  id="TFw" value="Enter Value in Meters" type="number"><br>
           </td>
         </tr>
         <tr>
           <td>TFt</td>
-          <td><input name="TFt" type="number"><br>
+          <td><input id="TFt" type="number"><br>
           </td>
         </tr>
         <tr>
           <td>Wh</td>
-          <td><input name="Wh" type="number"><br>
+          <td><input id="Wh" type="number"><br>
           </td>
         </tr>
         <tr>
           <td>Wt</td>
-          <td><input name="Wh" type="number"><br>
+          <td><input id="Wh" type="number"><br>
           </td>
         </tr>
         <tr>
           <td>BFt</td>
-          <td><input name="BFt" type="number"><br>
+          <td><input id="BFt" type="number"><br>
           </td>
         </tr>
         <tr>
           <td>BFw</td>
-          <td><input name="BFw" type="number"><br>
+          <td><input id="BFw" type="number"><br>
           </td>
         </tr>
       </tbody>
     </table>
     <input name="Submit" id="button" value="Calculate" formtarget="_top" type="submit">
+    <table id="solution">
+      <tr id="tr">
+        <td>
+          <b>
+            <p>Area</p>
+          </b>
+        </td>
+        <td>
+          <b>
+            <p id="area"></p>
+          </b>
+        </td>
+      </tr>
+  
+      <tr id="tr">
+        <td>
+          <b>
+            <p>Center of Gravity x-coordinate</p>
+          </b>
+        </td>
+        <td>
+          <b>
+            <p id="cog-x"></p>
+          </b>
+        </td>
+      </tr>
+  
+      <tr id="tr">
+        <td>
+          <b>
+            <p>Center of Gravity y-coordinate</p>
+          </b>
+        </td>
+        <td>
+          <b>
+            <p id="cog-y"></p>
+          </b>
+        </td>
+      </tr>
+  
+      <tr id="tr">
+        <td>
+          <b>
+            <p>Moment of Inertia about xx Centroidal Axis</p>
+          </b>
+        </td>
+        <td>
+          <b>
+            <p id="moi-xx"></p>
+          </b>
+        </td>
+      </tr>
+  
+      
+      <tr id="tr">
+        <td>
+          <b>
+            <p>Moment of Inertia about yy Centroidal Axis</p>
+          </b>
+        </td>
+        <td>
+          <b>
+            <p id="moi-yy"></p>
+          </b>
+        </td>
+      </tr>
+    </table>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

@@ -3,9 +3,11 @@
     <meta http-equiv="content-type" content="text/html; charset=windows-1252">
     <title> Hollow Circular Beam </title>
     <link rel="stylesheet" href="style_page.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
   </head>
   <body>
-    <p><img  class="zoom" src="../images/HCircular2.png"
+    <div id="fullbody">
+    <p><img class="zoom" src="../images/HCircular2.png"
 
         alt="Hollow circular beam" title="Hcircle"></p>
     <table class="table" >
@@ -16,17 +18,86 @@
         </tr>
         <tr>
           <td>D</td>
-          <td><input name="D" value="Enter value in meters" type="number"><br>
+          <td><input id="D" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" type="number"><br>
           </td>
         </tr>
         <tr>
           <td>d</td>
-          <td><input name="d" type="number"><br>
+          <td><input id="d" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" type="number"><br>
           </td>
         </tr>
       </tbody>
     </table>
-    <input name="Submit" id="button"  value="Calculate" formtarget="_top" type="submit">
+    <input name="Submit" id="button"  value="Calculate" formtarget="_top" type="submit"  onclick="HCircular()">
     <script src="script.js"></script>
+    <table id="solution">
+      <tr id="tr">
+        <td>
+          <b>
+            <p>Area</p>
+          </b>
+        </td>
+        <td>
+          <b>
+            <p id="area"></p>
+          </b>
+        </td>
+      </tr>
+  
+      <tr id="tr">
+        <td>
+          <b>
+            <p>Center of Gravity x-coordinate</p>
+          </b>
+        </td>
+        <td>
+          <b>
+            <p id="cog-x"></p>
+          </b>
+        </td>
+      </tr>
+  
+      <tr id="tr">
+        <td>
+          <b>
+            <p>Center of Gravity y-coordinate</p>
+          </b>
+        </td>
+
+        <td>
+          <b>
+            <p id="cog-y"></p>
+          </b>
+        </td>
+      </tr>
+  
+      <tr id="tr">
+        <td>
+          <b>
+            <p>Moment of Inertia about xx Centroidal Axis</p>
+          </b>
+        </td>
+        <td>
+          <b>
+            <p id="moi-xx"></p>
+          </b>
+        </td>
+      </tr>
+  
+      
+      <tr id="tr">
+        <td>
+          <b>
+            <p>Moment of Inertia about yy Centroidal Axis</p>
+          </b>
+        </td>
+        <td>
+          <b>
+            <p id="moi-yy"></p>
+          </b>
+        </td>
+      </tr>
+    </table>
+    </div>
   </body>
 </html>

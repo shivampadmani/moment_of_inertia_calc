@@ -1,14 +1,17 @@
-<html>
+<html lang="en">
 
 <head>
+  <meta charset="utf-8">
   <meta http-equiv="content-type" content="text/html; charset=windows-1252">
   <title> Circular Beam </title>
+  <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
   <link rel="stylesheet" href="style_page.css">
 </head>
 
 <body>
+
   <div id="fullbody">
-  <p><img class="zoom" id="img" src="../images/Circular.png" alt="Circular" title="Circular"></p>
+  <p><img class="zoom"  src="../images/Circular.png" alt="Circular" title="Circular"></p>
   <table class="table">
     <tbody>
       <tr>
@@ -18,13 +21,13 @@
       <tr>
         <td>D</td>
         <td>
-          <input id="D" type="text"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /><br>
+          <input id="D" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/><br>
         </td>
       </tr>
     </tbody>
   </table>
   <input name="submit" id="button" value="Calculate" formtarget="_top" type="submit" onclick="Circular()">
-  <script src="script.js"></script>
+  
   <table id="solution">
     <tr id="tr">
       <td>
@@ -55,7 +58,7 @@
     <tr id="tr">
       <td>
         <b>
-          <p>Center of GRavity y-coordinate</p>
+          <p>Center of Gravity y-coordinate</p>
         </b>
       </td>
       <td>
@@ -93,6 +96,8 @@
     </tr>
   </table>
 </div>
+<script src="script.js">  </script>
+
 </body>
 
 </html>

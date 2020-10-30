@@ -6,6 +6,7 @@
     
   </head>
   <body>
+    <div id="fullbody">
     <p><img  class="zoom" src="../images/LBeam2.png"
 
         alt="L Section" title="L section"></p>
@@ -17,27 +18,95 @@
         </tr>
         <tr>
           <td>LFt</td>
-          <td><input name="LFt" value="Enter Value in Meter" type="number"><br>
+          <td><input id="LFt" value="Enter Value in Meter" type="number"><br>
           </td>
         </tr>
         <tr>
           <td>LFh</td>
-          <td><input name="LFh" type="number"><br>
+          <td><input id="LFh" type="number"><br>
           </td>
         </tr>
         <tr>
           <td>BFt</td>
-          <td><input name="BFt" type="number"><br>
+          <td><input id="BFt" type="number"><br>
           </td>
         </tr>
         <tr>
           <td>BFw</td>
-          <td><input name="BFw" type="number"><br>
+          <td><input id="BFw" type="number"><br>
           </td>
         </tr>
       </tbody>
     </table>
     <input name="Submit" id="button"  value="Calculate" formtarget="_top" type="submit">
+    <table id="solution">
+      <tr id="tr">
+        <td>
+          <b>
+            <p>Area</p>
+          </b>
+        </td>
+        <td>
+          <b>
+            <p id="area"></p>
+          </b>
+        </td>
+      </tr>
+  
+      <tr id="tr">
+        <td>
+          <b>
+            <p>Center of Gravity x-coordinate</p>
+          </b>
+        </td>
+        <td>
+          <b>
+            <p id="cog-x"></p>
+          </b>
+        </td>
+      </tr>
+  
+      <tr id="tr">
+        <td>
+          <b>
+            <p>Center of Gravity y-coordinate</p>
+          </b>
+        </td>
+        <td>
+          <b>
+            <p id="cog-y"></p>
+          </b>
+        </td>
+      </tr>
+  
+      <tr id="tr">
+        <td>
+          <b>
+            <p>Moment of Inertia about xx Centroidal Axis</p>
+          </b>
+        </td>
+        <td>
+          <b>
+            <p id="moi-xx"></p>
+          </b>
+        </td>
+      </tr>
+  
+      
+      <tr id="tr">
+        <td>
+          <b>
+            <p>Moment of Inertia about yy Centroidal Axis</p>
+          </b>
+        </td>
+        <td>
+          <b>
+            <p id="moi-yy"></p>
+          </b>
+        </td>
+      </tr>
+    </table>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

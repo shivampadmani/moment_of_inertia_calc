@@ -1,19 +1,22 @@
 body {
-    background-color: #283149;
+    background-color: pink;
   }
 h2{
-  color: aliceblue;
+  color: rgb(4, 0, 255);
   }
-  
+  .upper{
+    background-image: radial-gradient(  rgb(139, 235, 126) 50%,blue   );
+    border-radius: 5px;
+  }
   h1 {
-    color: #79c9e4;
+    color: #050a49;
     text-align: center;
     font-family: "Arvo", cursive;
     font size: 100px;
   }
   
   footer {
-    color: #DBEDF3;
+    color: #012531;
     font-family: sans-serif;
     text-align: center;
   }

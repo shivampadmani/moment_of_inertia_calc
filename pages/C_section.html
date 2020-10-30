@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="style_page.css">
   </head>
   <body>
+    <div id="fullbody">
     <p> <img  class="zoom" src="../images/CSection.png"
 
         alt="C section" title="C Section"> </p>
@@ -47,6 +48,74 @@
       </tbody>
     </table>
     <input name="Submit" id="button"  value="Calculate" formmethod="get" formtarget="_top" type="submit">
+    <table id="solution">
+      <tr id="tr">
+        <td>
+          <b>
+            <p>Area</p>
+          </b>
+        </td>
+        <td>
+          <b>
+            <p id="area"></p>
+          </b>
+        </td>
+      </tr>
+  
+      <tr id="tr">
+        <td>
+          <b>
+            <p>Center of Gravity x-coordinate</p>
+          </b>
+        </td>
+        <td>
+          <b>
+            <p id="cog-x"></p>
+          </b>
+        </td>
+      </tr>
+  
+      <tr id="tr">
+        <td>
+          <b>
+            <p>Center of Gravity y-coordinate</p>
+          </b>
+        </td>
+        <td>
+          <b>
+            <p id="cog-y"></p>
+          </b>
+        </td>
+      </tr>
+  
+      <tr id="tr">
+        <td>
+          <b>
+            <p>Moment of Inertia about xx Centroidal Axis</p>
+          </b>
+        </td>
+        <td>
+          <b>
+            <p id="moi-xx"></p>
+          </b>
+        </td>
+      </tr>
+  
+      
+      <tr id="tr">
+        <td>
+          <b>
+            <p>Moment of Inertia about yy Centroidal Axis</p>
+          </b>
+        </td>
+        <td>
+          <b>
+            <p id="moi-yy"></p>
+          </b>
+        </td>
+      </tr>
+    </table>
     <script src="script.js"></script>
+    </div>
   </body>
 </html>
