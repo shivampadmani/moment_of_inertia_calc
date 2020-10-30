@@ -17,17 +17,17 @@
         </tr>
         <tr>
           <td>TFw</td>
-          <td><input  id="TFw" value="Enter Value in Meters" type="number"><br>
+          <td><input  id="TFw"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" type="number"><br>
           </td>
         </tr>
         <tr>
           <td>TFt</td>
-          <td><input id="TFt" type="number"><br>
+          <td><input id="TFt"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" type="number"><br>
           </td>
         </tr>
         <tr>
           <td>Wh</td>
-          <td><input id="Wh" type="number"><br>
+          <td><input id="Wh"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" type="number"><br>
           </td>
         </tr>
         <tr>
