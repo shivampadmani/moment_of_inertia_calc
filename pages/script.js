@@ -103,10 +103,10 @@ function Circular() {
 	document.getElementById("moi-xx").innerHTML = Ixx + "  m^4";
 	document.getElementById("moi-yy").innerHTML = Iyy + "  m^4";
 }
-/*
-
 //--------------------------------------------------------------------------------------------------------------------------------------
-function Triangular(h, b) {
+function Triangular() {
+	var h = document.getElementById("h").value;
+	var b = document.getElementById("b").value;
 	var Area, Cx, Cy, Ixx, Iyy;
 	if (h == undefined || b == undefined) {
 		alert: "Please Enter a Valid input";
@@ -114,14 +114,14 @@ function Triangular(h, b) {
 	Area = (h * b) / 2;
 	Cx = b / 2;
 	Cy = h / 3;
-	Ixx = (b * h ^ 3) / 36;
-	Iyy = (h * b ^ 3) / 48;
+	Ixx = (b * h*h*h) / 36;
+	Iyy = (h * b*b*b) / 48;
 	document.getElementById("area").innerHTML = Area + "  m^2";
 	document.getElementById("cog-x").innerHTML = Cx + "  m";
 	document.getElementById("cog-y").innerHTML = Cy + "  m";
 	document.getElementById("moi-xx").innerHTML = Ixx + "  m^4";
 	document.getElementById("moi-yy").innerHTML = Iyy + "  m^4";
-}*/
+}
 //--------------------------------------------------------------------------------------------------------------------------------------
 function Rectangular() {
 	var h = document.getElementById("h").value;
