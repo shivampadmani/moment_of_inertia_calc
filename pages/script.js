@@ -18,7 +18,7 @@ function TBeam() {
 	document.getElementById("cog-x").innerHTML = Cx + "  m";
 	document.getElementById("cog-y").innerHTML = Cy + "  m";
 	document.getElementById("moi-xx").innerHTML = Ixx + "  m^4";
-	document.getElementById("moi-yy").innerHTML = Iyy + "  m^4"; 
+	document.getElementById("moi-yy").innerHTML = Iyy + "  m^4";
 }
 //--------------------------------------------------------------------------------------------------------------------------------
 function HCircular() {
@@ -47,7 +47,7 @@ function IBeam() {
 	var Wh = document.getElementById("Wh").value;
 	var BFt = document.getElementById("BFt").value;
 	var BFw = document.getElementById("BFw").value;
-	var Area,Cx,Cy,Ixx,Iyy;
+	var Area, Cx, Cy, Ixx, Iyy;
 
 	Area = (TFt * TFw) + (Wh * Wt) + (BFt * BFw);
 	Cx = 0;
@@ -112,8 +112,8 @@ function Triangular() {
 	Area = (h * b) / 2;
 	Cx = b / 2;
 	Cy = h / 3;
-	Ixx = (b * h*h*h) / 36;
-	Iyy = (h * b*b*b) / 48;
+	Ixx = (b * h * h * h) / 36;
+	Iyy = (h * b * b * b) / 48;
 	document.getElementById("area").innerHTML = Area + "  m^2";
 	document.getElementById("cog-x").innerHTML = Cx + "  m";
 	document.getElementById("cog-y").innerHTML = Cy + "  m";
@@ -170,13 +170,13 @@ function LSection() {
 	var LFt = document.getElementById("LFt").value;
 	var BFt = document.getElementById("BFt").value;
 	var BFw = document.getElementById("BFw").value;
-	var Area, Cx, Cy,Ixx, Iyy;
+	var Area, Cx, Cy, Ixx, Iyy;
 
 	Area = (LFt * LFh) + (BFt * BFw);
 	Cx = ((LFt * (LFt * LFh) / 2) + (BFw * (BFt * BFw) / 2)) / Area;
 	Cy = ((LFh * (LFt * LFh) / 2) + (BFt * (BFt * BFw) / 2)) / Area;
-//	Ixx =((LFt*LFh*LFh*LFh/12)+(LFt*LFh*(Cy-(LFh/2))*(Cy-(LFh/2))))+((BFw*BFt*BFt*BFt/12)+(BFw*BFt*(Cy-(BFt/2))*(Cy-(BFt/2)))
-//	Iyy =((LFt*LFh*LFt*LFt/12)+(LFt*LFh*(Cx-(LFt/2))*(Cx-(LFt/2))))+((BFw*BFt*BFw*BFw/12)+(BFw*BFt*(Cx-(BFw/2))*(Cx-(BFw/2)))
+	Ixx = ((LFt * Math.pow(LFh, 3) / 12) + (LFt * LFh * Math.pow((Cy - (LFh / 2)), 3))) + (BFw * Math.pow(BFt,3)/ 12) + (BFw * BFt * Math.pow((Cy - (BFt / 2)),2) )
+	//Iyy = ((LFt * LFh * LFt * LFt / 12) + (LFt * LFh * (Cx - (LFt / 2)) * (Cx - (LFt / 2)))) + ((BFw * BFt * BFw * BFw / 12) + (BFw * BFt * (Cx - (BFw / 2)) * (Cx - (BFw / 2)))
 	document.getElementById("area").innerHTML = Area + "  m^2";
 	document.getElementById("cog-x").innerHTML = Cx + "  m";
 	document.getElementById("cog-y").innerHTML = Cy + "  m";
