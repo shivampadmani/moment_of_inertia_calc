@@ -1,15 +1,14 @@
 <html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
-    <title> L Section Beam </title>
-    <link rel="stylesheet" href="style_page.css">
-    
-  </head>
-  <body>
-    <div id="fullbody">
-    <p><img  class="zoom" src="../images/LBeam2.png"
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+  <title> L Section Beam </title>
+  <link rel="stylesheet" href="style_page.css">
 
-        alt="L Section" title="L section"></p>
+</head>
+
+<body>
+  <div id="fullbody">
+    <p><img class="zoom" src="../images/LBeam2.png" alt="L Section" title="L section"></p>
     <table class="table">
       <tbody>
         <tr>
@@ -18,27 +17,29 @@
         </tr>
         <tr>
           <td>LFt</td>
-          <td><input id="LFt"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" value="Enter Value in Meter" type="number"><br>
+          <td><input id="LFt" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" type="number"><br>
           </td>
         </tr>
         <tr>
           <td>LFh</td>
-          <td><input id="LFh"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" type="number"><br>
+          <td><input id="LFh" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  type="number"><br>
           </td>
         </tr>
         <tr>
           <td>BFt</td>
-          <td><input id="BFt"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  type="number"><br>
+          <td><input id="BFt" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+              type="number"><br>
           </td>
         </tr>
         <tr>
           <td>BFw</td>
-          <td><input id="BFw"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  type="number"><br>
+          <td><input id="BFw" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+              type="number"><br>
           </td>
         </tr>
       </tbody>
     </table>
-    <input name="Submit" id="button"  value="Calculate" formtarget="_top" type="submit">
+    <input name="Submit" id="button" value="Calculate" formtarget="_top" type="submit" onclick="LSection()">
     <table id="solution">
       <tr id="tr">
         <td>
@@ -52,7 +53,7 @@
           </b>
         </td>
       </tr>
-  
+
       <tr id="tr">
         <td>
           <b>
@@ -65,7 +66,7 @@
           </b>
         </td>
       </tr>
-  
+
       <tr id="tr">
         <td>
           <b>
@@ -78,7 +79,7 @@
           </b>
         </td>
       </tr>
-  
+
       <tr id="tr">
         <td>
           <b>
@@ -91,8 +92,8 @@
           </b>
         </td>
       </tr>
-  
-      
+
+
       <tr id="tr">
         <td>
           <b>
@@ -106,8 +107,9 @@
         </td>
       </tr>
     </table>
-    </div>
     <script src="script.js"></script>
     <footer> Made with ❤️ in India. </footer>
-  </body>
+  </div>
+</body>
+
 </html>

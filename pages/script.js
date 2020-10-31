@@ -48,9 +48,7 @@ function IBeam() {
 	var BFt = document.getElementById("BFt").value;
 	var BFw = document.getElementById("BFw").value;
 	var Area, Cx, Cy, Ixx, Iyy;
-	if (TFw == undefined || TFt == undefined || Wt == undefined || Wh == undefined || BFt == undefined || BFw == undefined) {
-		alert: "Please Enter a Valid input";
-	}
+
 	Area = (TFt * TFw) + (Wh * Wt) + (BFt * BFw);
 	Cx = 0;
 	Cy = ((TFt * (TFt * TFw) / 2) + (Wh * (Wh * Wt) / 2) + (BFt * (BFt * BFw) / 2)) / Area;
@@ -165,21 +163,23 @@ function CSection() {
 	document.getElementById("moi-xx").innerHTML = Ixx + "  m^4";
 	document.getElementById("moi-yy").innerHTML = Iyy + "  m^4";
 }
-/*
+
 //--------------------------------------------------------------------------------------------------------------------------------------
-function LSection(LFh, LFt, BFt, BFw) {
-	var Area, Cx, Cy, Ixx, Iyy;
-	if (Lfh == undefined || LFt == undefined || BFt == undefined || BFw == undefined) {
-		alert: "Please Enter a Valid input";
-	}
+function LSection() {
+	var LFh = document.getElementById("LFh").value;
+	var LFt = document.getElementById("LFt").value;
+	var BFt = document.getElementById("BFt").value;
+	var BFw = document.getElementById("BFw").value;
+	var Area, Cx, Cy,Ixx, Iyy;
+
 	Area = (LFt * LFh) + (BFt * BFw);
 	Cx = ((LFt * (LFt * LFh) / 2) + (BFw * (BFt * BFw) / 2)) / Area;
 	Cy = ((LFh * (LFt * LFh) / 2) + (BFt * (BFt * BFw) / 2)) / Area;
-	Ixx =
-		Iyy =
+	Ixx = 
+	Iyy =
 		document.getElementById("area").innerHTML = Area + "  m^2";
 	document.getElementById("cog-x").innerHTML = Cx + "  m";
 	document.getElementById("cog-y").innerHTML = Cy + "  m";
 	document.getElementById("moi-xx").innerHTML = Ixx + "  m^4";
 	document.getElementById("moi-yy").innerHTML = Iyy + "  m^4";
-}*/
+}
