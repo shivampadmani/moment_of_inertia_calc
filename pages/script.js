@@ -31,7 +31,7 @@ function HCircular() {
 	Area = 3.14 * ((D * D) - (d * d));
 	Cx = 0;
 	Cy = 0;
-	Ixx = 3.14 * (D * D * D * D - d * d * d * d);
+	Ixx = 3.14 * ((D * D * D * D) - (d * d * d * d));
 	Iyy = Ixx;
 	document.getElementById("area").innerHTML = Area + "  m^2";
 	document.getElementById("cog-x").innerHTML = Cx + "  m";
@@ -50,7 +50,7 @@ function IBeam() {
 	var Area, Cx, Cy, Ixx, Iyy;
 
 	Area = (TFt * TFw) + (Wh * Wt) + (BFt * BFw);
-	Cx = 0;
+	Cx = ((TFw * (TFt * TFw) / 2) + (Wt * (Wh * Wt) / 2) + (BFw * (BFt * BFw) / 2)) / Area;;
 	Cy = ((TFt * (TFt * TFw) / 2) + (Wh * (Wh * Wt) / 2) + (BFt * (BFt * BFw) / 2)) / Area;
 	Ixx = (Wt * Wh * Wh * Wh) / 12 + (BFt * BFt * BFt * BFw) / 12 + (TFt * TFt * TFt * TFw) / 12 - (Wh * Wh * Wh * (TFw / 2 - Wt / 2)) / 6;
 	Iyy = ((TFw * TFw * TFw * TFt) + (Wt * Wt * Wt * Wh) + (BFw * BFw * BFw * BFt)) / 12;
@@ -73,8 +73,8 @@ function HRectangular() {
 	Area = (h * b) - (h1 * b1);
 	Cx = b / 2;
 	Cy = h / 2;
-	Ixx = (b * h ^ 3 / 12) + (b1 * h1 ^ 3 / 12);
-	Iyy = (b ^ 3 * h / 12) + (b1 ^ 3 * h1 / 12);
+	Ixx = (b * Math.pow(h,3)/ 12) + (b1 * Math.pow(h1,3) / 12);
+	Iyy = (Math.pow(b,3) * h / 12) + (Math.pow(b1,3) * h1 / 12);
 	document.getElementById("area").innerHTML = Area + "  m^2";
 	document.getElementById("cog-x").innerHTML = Cx + "  m";
 	document.getElementById("cog-y").innerHTML = Cy + "  m";
@@ -93,7 +93,7 @@ function Circular() {
 	Area = 3.14 * D * D / 4;
 	Cx = 0;
 	Cy = 0;
-	Ixx = (3.14 / 64) * D * D * D * D;
+	Ixx = (3.14 / 64) * Math.pow(D,4);
 	Iyy = Ixx;
 	document.getElementById("area").innerHTML = Area + "  m^2";
 	document.getElementById("cog-x").innerHTML = Cx + "  m";
@@ -112,8 +112,8 @@ function Triangular() {
 	Area = (h * b) / 2;
 	Cx = b / 2;
 	Cy = h / 3;
-	Ixx = (b * h * h * h) / 36;
-	Iyy = (h * b * b * b) / 48;
+	Ixx = (b * Math.pow(h,3)) / 36;
+	Iyy = (h * Math.pow(b,3)) / 48;
 	document.getElementById("area").innerHTML = Area + "  m^2";
 	document.getElementById("cog-x").innerHTML = Cx + "  m";
 	document.getElementById("cog-y").innerHTML = Cy + "  m";
@@ -131,8 +131,8 @@ function Rectangular() {
 	Area = (h * b);
 	Cx = b / 2;
 	Cy = h / 2;
-	Ixx = b * h ^ 3 / 12;
-	Iyy = h * b ^ 3 / 12;
+	Ixx = (b * Math.pow(h,3) )/ 12;
+	Iyy = (h * Math.pow(b,3) )/ 12;
 	document.getElementById("area").innerHTML = Area + "  m^2";
 	document.getElementById("cog-x").innerHTML = Cx + "  m";
 	document.getElementById("cog-y").innerHTML = Cy + "  m";
@@ -155,8 +155,8 @@ function CSection() {
 	Area = (TFt * TFw) + (h * Wt) + (BFt * BFw);
 	Cx = ((TFw * (TFt * TFw) / 2) + (Wt * (h * Wt) / 2) + (BFw * (BFt * BFw) / 2)) / Area;
 	Cy = ((TFt * (TFt * TFw) / 2) + (h * (h * Wt) / 2) + (BFt * (BFt * BFw) / 2)) / Area;
-	//Ixx =((TFw*TFt*TFt*TFt/12)+(TFw*TFt*(Cy-(TFt/2))*(Cy-(TFt/2)))+((Wt*h*h*h/12)+(Wt*h*(Cy-(h/2))*(Cy-(h/2))))+((BFw*BFt*BFt*BFt/12)+(BFw*BFt*(Cy-(BFt/2))*(Cy-(BFt/2)))
-	//Iyy =((TFt*TFw*TFw*TFw/12)+(TFt*TFw*(Cx-(TFw/2))*(Cx-(TFw/2)))+((Wt*h*Wt*Wt/12)+(Wt*h*(Cx-(Wt/2))*(Cx-(Wt/2))))+((BFw*BFt*BFw*BFw/12)+(BFw*BFt*(Cx-(BFw/2))*(Cx-(BFw/2)))
+	Ixx =((TFw*Math.pow(TFt,3)/12)+(TFw*TFt*Math.pow((Cy-(TFt/2)),2)))+((Wt*Math.pow(h,3)/12)+(Wt*h*Math.pow((Cy-(h/2)),2)))+((BFw*Math.pow(BFt,2)/12)+(BFw*BFt*Math.pow((Cy-(BFt/2)),2)));
+	Iyy =((TFt*Math.pow(TFw,3)/12)+(TFt*TFw*Math.pow((Cx-(TFw/2)),2)))+((h*Math.pow(Wt,3)/12)+(Wt*h*Math.pow((Cx-(Wt/2)),2)))+((BFt*Math.pow(BFw,3)/12)+(BFw*BFt*Math.pow((Cx-(BFw/2)),2)));
 	document.getElementById("area").innerHTML = Area + "  m^2";
 	document.getElementById("cog-x").innerHTML = Cx + "  m";
 	document.getElementById("cog-y").innerHTML = Cy + "  m";
@@ -175,8 +175,8 @@ function LSection() {
 	Area = (LFt * LFh) + (BFt * BFw);
 	Cx = ((LFt * (LFt * LFh) / 2) + (BFw * (BFt * BFw) / 2)) / Area;
 	Cy = ((LFh * (LFt * LFh) / 2) + (BFt * (BFt * BFw) / 2)) / Area;
-	Ixx = ((LFt * Math.pow(LFh, 3) / 12) + (LFt * LFh * Math.pow((Cy - (LFh / 2)), 3))) + (BFw * Math.pow(BFt,3)/ 12) + (BFw * BFt * Math.pow((Cy - (BFt / 2)),2) )
-	//Iyy = ((LFt * LFh * LFt * LFt / 12) + (LFt * LFh * (Cx - (LFt / 2)) * (Cx - (LFt / 2)))) + ((BFw * BFt * BFw * BFw / 12) + (BFw * BFt * (Cx - (BFw / 2)) * (Cx - (BFw / 2)))
+	Ixx = ((LFt * Math.pow(LFh, 3) / 12) + (LFt * LFh * Math.pow((Cy - (LFh / 2)), 2))) + (BFw * Math.pow(BFt,3)/ 12) + (BFw * BFt * Math.pow((Cy - (BFt / 2)),2));
+	Iyy = ((LFh * Math.pow(LFt, 3)/ 12) + (LFt * LFh * Math.pow((Cx - (LFt / 2)), 2))) + (BFt * Math.pow(BFw,3)/ 12) + (BFw * BFt * Math.pow((Cx - (BFw / 2)),2));
 	document.getElementById("area").innerHTML = Area + "  m^2";
 	document.getElementById("cog-x").innerHTML = Cx + "  m";
 	document.getElementById("cog-y").innerHTML = Cy + "  m";
