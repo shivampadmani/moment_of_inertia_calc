@@ -18,7 +18,7 @@ function TBeam() {
 	document.getElementById("cog-x").innerHTML = Cx + "  m";
 	document.getElementById("cog-y").innerHTML = Cy + "  m";
 	document.getElementById("moi-xx").innerHTML = Ixx + "  m^4";
-	document.getElementById("moi-yy").innerHTML = Iyy + "  m^4";
+	document.getElementById("moi-yy").innerHTML = Iyy + "  m^4"; 
 }
 //--------------------------------------------------------------------------------------------------------------------------------
 function HCircular() {
@@ -175,9 +175,9 @@ function LSection() {
 	Area = (LFt * LFh) + (BFt * BFw);
 	Cx = ((LFt * (LFt * LFh) / 2) + (BFw * (BFt * BFw) / 2)) / Area;
 	Cy = ((LFh * (LFt * LFh) / 2) + (BFt * (BFt * BFw) / 2)) / Area;
-	Ixx = 
-	Iyy =
-		document.getElementById("area").innerHTML = Area + "  m^2";
+//	Ixx =((LFt*LFh*LFh*LFh/12)+(LFt*LFh*(Cy-(LFh/2))*(Cy-(LFh/2))))+((BFw*BFt*BFt*BFt/12)+(BFw*BFt*(Cy-(BFt/2))*(Cy-(BFt/2)))
+//	Iyy =((LFt*LFh*LFt*LFt/12)+(LFt*LFh*(Cx-(LFt/2))*(Cx-(LFt/2))))+((BFw*BFt*BFw*BFw/12)+(BFw*BFt*(Cx-(BFw/2))*(Cx-(BFw/2)))
+	document.getElementById("area").innerHTML = Area + "  m^2";
 	document.getElementById("cog-x").innerHTML = Cx + "  m";
 	document.getElementById("cog-y").innerHTML = Cy + "  m";
 	document.getElementById("moi-xx").innerHTML = Ixx + "  m^4";
