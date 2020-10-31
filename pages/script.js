@@ -20,7 +20,7 @@ function TBeam() {
 	document.getElementById("moi-xx").innerHTML = Ixx + "  m^4";
 	document.getElementById("moi-yy").innerHTML = Iyy + "  m^4";
 }
-//----------------------------------------------------------------------------------------------------*/
+//--------------------------------------------------------------------------------------------------------------------------------
 function HCircular() {
 	var D = document.getElementById("D").value;
 	var d = document.getElementById("d").value;
@@ -39,7 +39,7 @@ function HCircular() {
 	document.getElementById("moi-xx").innerHTML = Ixx + "  m^4";
 	document.getElementById("moi-yy").innerHTML = Iyy + "  m^4";
 }
-//----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------------------------------
 function IBeam() {
 	var TFw = document.getElementById("TFw").value;
 	var TFt = document.getElementById("TFt").value;
@@ -62,7 +62,7 @@ function IBeam() {
 	document.getElementById("moi-xx").innerHTML = Ixx + "  m^4";
 	document.getElementById("moi-yy").innerHTML = Iyy + "  m^4";
 }
-//----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------------------------------
 function HRectangular() {
 	var h = document.getElementById("h").value;
 	var h1 = document.getElementById("h1").value;
@@ -83,7 +83,7 @@ function HRectangular() {
 	document.getElementById("moi-xx").innerHTML = Ixx + "  m^4";
 	document.getElementById("moi-yy").innerHTML = Iyy + "  m^4";
 }
-//----------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------------------------------
 //This function will work on Circulat.html page only
 
 function Circular() {
@@ -105,7 +105,7 @@ function Circular() {
 }
 /*
 
-//---------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------------------------------
 function Triangular(h, b) {
 	var Area, Cx, Cy, Ixx, Iyy;
 	if (h == undefined || b == undefined) {
@@ -116,7 +116,13 @@ function Triangular(h, b) {
 	Cy = h / 3;
 	Ixx = (b * h ^ 3) / 36;
 	Iyy = (h * b ^ 3) / 48;
+	document.getElementById("area").innerHTML = Area + "  m^2";
+	document.getElementById("cog-x").innerHTML = Cx + "  m";
+	document.getElementById("cog-y").innerHTML = Cy + "  m";
+	document.getElementById("moi-xx").innerHTML = Ixx + "  m^4";
+	document.getElementById("moi-yy").innerHTML = Iyy + "  m^4";
 }*/
+//--------------------------------------------------------------------------------------------------------------------------------------
 function Rectangular() {
 	var h = document.getElementById("h").value;
 	var b = document.getElementById("b").value;
@@ -136,7 +142,7 @@ function Rectangular() {
 	document.getElementById("moi-yy").innerHTML = Iyy + "  m^4";
 }/*
 
-//----------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------------------------------------
 function CSection(TFw, TFt, Wt, h, BFt, BFw) {
 	var Area, Cx, Cy, Ixx, Iyy;
 	if (TFw == undefined || TFt == undefined || Wt == undefined || h == undefined || BFt == undefined || BFw == undefined) {
@@ -153,7 +159,7 @@ function CSection(TFw, TFt, Wt, h, BFt, BFw) {
 	document.getElementById("moi-xx").innerHTML = Ixx + "  m^4";
 	document.getElementById("moi-yy").innerHTML = Iyy + "  m^4";
 }
-//----------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------------------------------
 function LSection(LFh, LFt, BFt, BFw) {
 	var Area, Cx, Cy, Ixx, Iyy;
 	if (Lfh == undefined || LFt == undefined || BFt == undefined || BFw == undefined) {
