@@ -47,14 +47,14 @@ function IBeam() {
 	var Wh = document.getElementById("Wh").value;
 	var BFt = document.getElementById("BFt").value;
 	var BFw = document.getElementById("BFw").value;
-	var Area, Cx, Cy, Ixx, Iyy;
+	var Area,Cx,Cy,Ixx,Iyy;
 
 	Area = (TFt * TFw) + (Wh * Wt) + (BFt * BFw);
 	Cx = 0;
 	Cy = ((TFt * (TFt * TFw) / 2) + (Wh * (Wh * Wt) / 2) + (BFt * (BFt * BFw) / 2)) / Area;
 	Ixx = (Wt * Wh * Wh * Wh) / 12 + (BFt * BFt * BFt * BFw) / 12 + (TFt * TFt * TFt * TFw) / 12 - (Wh * Wh * Wh * (TFw / 2 - Wt / 2)) / 6;
 	Iyy = ((TFw * TFw * TFw * TFt) + (Wt * Wt * Wt * Wh) + (BFw * BFw * BFw * BFt)) / 12;
-	document.getElementById("area").innerHTML ="The area is "+ Area + "  m^2";
+	document.getElementById("area").innerHTML = Area + " m^2";
 	document.getElementById("cog-x").innerHTML = Cx + "  m";
 	document.getElementById("cog-y").innerHTML = Cy + "  m";
 	document.getElementById("moi-xx").innerHTML = Ixx + "  m^4";
