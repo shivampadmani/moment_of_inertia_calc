@@ -1,53 +1,60 @@
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
-    <title> I Section Beam </title>
-    <link rel="stylesheet" href="style_page.css">
-  </head>
-  <body>
-    <div id="fullbody">
-    <p><img  class="zoom"  src="../images/IBeam.png"
+<html lang="en">
 
-        alt="I section" title="I section"></p>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+  <title> I Section Beam </title>
+  <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+
+  <link rel="stylesheet" href="style_page.css">
+</head>
+
+<body>
+  <div id="fullbody">
+    <p><img class="zoom" src="../images/IBeam.png" alt="I section" title="I section"></p>
     <table class="table">
       <tbody>
         <tr>
           <td>Dimension Name</td>
-          <td>Value</td>
+          <td>Value (in mm)</td>
         </tr>
         <tr>
           <td>TFw</td>
-          <td><input  id="TFw"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" type="number"><br>
+          <td><input id="TFw" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+              type="number"><br>
           </td>
         </tr>
         <tr>
           <td>TFt</td>
-          <td><input id="TFt"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" type="number"><br>
+          <td><input id="TFt" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+              type="number"><br>
           </td>
         </tr>
         <tr>
           <td>Wh</td>
-          <td><input id="Wh"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" type="number"><br>
+          <td><input id="Wh" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+              type="number"><br>
           </td>
         </tr>
         <tr>
           <td>Wt</td>
-          <td><input id="Wh" type="number" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" ><br>
+          <td><input id="Wh" type="number"
+              oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"><br>
           </td>
         </tr>
         <tr>
           <td>BFt</td>
-          <td><input id="BFt" type="number" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"><br>
+          <td><input id="BFt" type="number"
+              oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"><br>
           </td>
         </tr>
         <tr>
           <td>BFw</td>
-          <td><input id="BFw" type="number" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"><br>
+          <td><input id="BFw" type="number"   oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"><br>
           </td>
         </tr>
       </tbody>
     </table>
-    <input name="Submit" id="button" value="Calculate" formtarget="_top" type="submit" onclick="IBeam()">
+    <input id="button" onclick="IBeam()" value="Calculate" formtarget="_top" type="submit">
     <table id="solution">
       <tr id="tr">
         <td>
@@ -61,7 +68,7 @@
           </b>
         </td>
       </tr>
-  
+
       <tr id="tr">
         <td>
           <b>
@@ -74,7 +81,7 @@
           </b>
         </td>
       </tr>
-  
+
       <tr id="tr">
         <td>
           <b>
@@ -87,7 +94,7 @@
           </b>
         </td>
       </tr>
-  
+
       <tr id="tr">
         <td>
           <b>
@@ -100,8 +107,8 @@
           </b>
         </td>
       </tr>
-  
-      
+
+
       <tr id="tr">
         <td>
           <b>
@@ -115,7 +122,8 @@
         </td>
       </tr>
     </table>
-    </div>
-    <script src="script.js"></script>
-  </body>
+  </div>
+  <script src="script.js">  </script>
+</body>
+
 </html>
