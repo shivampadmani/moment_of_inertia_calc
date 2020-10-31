@@ -140,10 +140,16 @@ function Rectangular() {
 	document.getElementById("cog-y").innerHTML = Cy + "  m";
 	document.getElementById("moi-xx").innerHTML = Ixx + "  m^4";
 	document.getElementById("moi-yy").innerHTML = Iyy + "  m^4";
-}/*
+}
 
 //------------------------------------------------------------------------------------------------------------------------------------
-function CSection(TFw, TFt, Wt, h, BFt, BFw) {
+function CSection() {
+	var TFw = document.getElementById("TFw").value;
+	var TFt = document.getElementById("TFt").value;
+	var Wt = document.getElementById("Wt").value;
+	var h = document.getElementById("h").value;
+	var BFt = document.getElementById("BFt").value;
+	var BFw = document.getElementById("BFw").value;
 	var Area, Cx, Cy, Ixx, Iyy;
 	if (TFw == undefined || TFt == undefined || Wt == undefined || h == undefined || BFt == undefined || BFw == undefined) {
 		alert: "Please Enter a Valid input";
@@ -151,14 +157,15 @@ function CSection(TFw, TFt, Wt, h, BFt, BFw) {
 	Area = (TFt * TFw) + (h * Wt) + (BFt * BFw);
 	Cx = ((TFw * (TFt * TFw) / 2) + (Wt * (h * Wt) / 2) + (BFw * (BFt * BFw) / 2)) / Area;
 	Cy = ((TFt * (TFt * TFw) / 2) + (h * (h * Wt) / 2) + (BFt * (BFt * BFw) / 2)) / Area;
-	Ixx =
-		Iyy =
-		document.getElementById("area").innerHTML = Area + "  m^2";
+	//Ixx =((TFw*TFt*TFt*TFt/12)+(TFw*TFt*(Cy-(TFt/2))*(Cy-(TFt/2)))+((Wt*h*h*h/12)+(Wt*h*(Cy-(h/2))*(Cy-(h/2))))+((BFw*BFt*BFt*BFt/12)+(BFw*BFt*(Cy-(BFt/2))*(Cy-(BFt/2)))
+	//Iyy =((TFt*TFw*TFw*TFw/12)+(TFt*TFw*(Cx-(TFw/2))*(Cx-(TFw/2)))+((Wt*h*Wt*Wt/12)+(Wt*h*(Cx-(Wt/2))*(Cx-(Wt/2))))+((BFw*BFt*BFw*BFw/12)+(BFw*BFt*(Cx-(BFw/2))*(Cx-(BFw/2)))
+	document.getElementById("area").innerHTML = Area + "  m^2";
 	document.getElementById("cog-x").innerHTML = Cx + "  m";
 	document.getElementById("cog-y").innerHTML = Cy + "  m";
 	document.getElementById("moi-xx").innerHTML = Ixx + "  m^4";
 	document.getElementById("moi-yy").innerHTML = Iyy + "  m^4";
 }
+/*
 //--------------------------------------------------------------------------------------------------------------------------------------
 function LSection(LFh, LFt, BFt, BFw) {
 	var Area, Cx, Cy, Ixx, Iyy;
