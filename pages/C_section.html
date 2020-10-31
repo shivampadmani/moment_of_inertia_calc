@@ -17,37 +17,37 @@
         </tr>
         <tr>
           <td>TFw</td>
-          <td><input  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="TFw" value="Please enter value in meter" min="0" type="number"><br>
+          <td><input id="TFw" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="TFw" value="Please enter value in meter" min="0" type="number"><br>
           </td>
         </tr>
         <tr>
           <td>TFt</td>
-          <td><input  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"name="TFt" type="number"><br>
+          <td><input id="TFt" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"name="TFt" type="number"><br>
           </td>
         </tr>
         <tr>
           <td>Wt</td>
-          <td><input  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="Wt" type="number"><br>
+          <td><input id="Wt" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="Wt" type="number"><br>
           </td>
         </tr>
         <tr>
           <td>h</td>
-          <td><input  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="h" type="number"><br>
+          <td><input id="h" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="h" type="number"><br>
           </td>
         </tr>
         <tr>
           <td>BFt</td>
-          <td><input  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="BFt" type="number"><br>
+          <td><input id="BFt" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="BFt" type="number"><br>
           </td>
         </tr>
         <tr>
           <td>BFw</td>
-          <td><input  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="BFw" type="number"><br>
+          <td><input id="BFw" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="BFw" type="number"><br>
           </td>
         </tr>
       </tbody>
     </table>
-    <input name="Submit" id="button"  value="Calculate" formmethod="get" formtarget="_top" type="submit">
+    <input name="Submit" id="button"  value="Calculate" formmethod="get" formtarget="_top" type="submit" onclick="CSection()">
     <table id="solution">
       <tr id="tr">
         <td>
@@ -117,5 +117,6 @@
     </table>
     <script src="script.js"></script>
     </div>
+    <footer> Made with ❤️ in India. </footer>
   </body>
 </html>
