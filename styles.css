@@ -1,9 +1,10 @@
 body {
-    background-color: pink;
+    background-color:pink;
  
   }
 h2{
-  color: rgb(4, 0, 255);
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   .upper{
     background-image: radial-gradient(  rgb(139, 235, 126) 40%,#00f   );
@@ -63,12 +64,12 @@ border: 2px;
   }
   button:hover {
     outline: none;
-    border: 10px solid #33df6c;
+    border: 10px solid #185f30;
     font-size: 50px;
     font-family: 'Arvo'  ;
     line-height: 2;
     font-weight: 900;
-    color: yellow;
+    color: rgb(63, 63, 18);
     text-shadow: 3px 0 #DBEDF3;
     border-radius: 15px;
     display: inline;
@@ -77,4 +78,8 @@ border: 2px;
     background-image: linear-gradient(to right, rgba(43, 223, 43, 0.788)   0%, rgb(235, 215, 126) 80%);
     cursor: pointer;
   }
- 
+ #intro{
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: larger;
+   text-align: center;
+ }
