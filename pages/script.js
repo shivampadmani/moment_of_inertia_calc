@@ -183,3 +183,6 @@ function LSection() {
 	document.getElementById("moi-xx").innerHTML = Ixx + "  m^4";
 	document.getElementById("moi-yy").innerHTML = Iyy + "  m^4";
 }
+function back(){
+	window.history.back();
+}

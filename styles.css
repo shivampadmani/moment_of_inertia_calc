@@ -1,12 +1,16 @@
 body {
     background-color: pink;
+ 
   }
 h2{
   color: rgb(4, 0, 255);
   }
   .upper{
-    background-image: radial-gradient(  rgb(139, 235, 126) 50%,blue   );
+    background-image: radial-gradient(  rgb(139, 235, 126) 40%,#00f   );
     border-radius: 5px;
+  }
+  .upper:hover{
+    border-color: #33df6c;
   }
   h1 {
     color: #050a49;
@@ -16,7 +20,7 @@ h2{
   }
   
   footer {
-    color: #012531;
+    color: #012531; 
     font-family: sans-serif;
     text-align: center;
   }
@@ -39,7 +43,8 @@ table .solution{
 border: 2px;
 }
 
-  button {
+
+ button {
     outline: none;
     border: 10px solid #33df6c;
     font-size: 50px;
@@ -72,3 +77,4 @@ border: 2px;
     background-image: linear-gradient(to right, rgba(43, 223, 43, 0.788)   0%, rgb(235, 215, 126) 80%);
     cursor: pointer;
   }
+ 
