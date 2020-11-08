@@ -1,6 +1,5 @@
 body {
-    background-color:pink;
- 
+  background-image: linear-gradient(to right, #b0b1d3   0%, rgba(32, 91, 180, 0.781) 80%);
   }
 h2{
   color: black;
@@ -30,10 +29,7 @@ h2{
   }
 
   
-  .pressed {
-    box-shadow: 0 3px 4px 0 #DBEDF3;
-    opacity: 0.5;
-  }
+ 
   
   .red {
     color: red;
@@ -43,43 +39,46 @@ h2{
 table .solution{
 border: 2px;
 }
+button {
+  outline: none;
+  border: 10px solid #0e5cd1;
+  font-size: 50px;
+  font-family: 'Arvo'  ;
+  line-height: 2;
+  font-weight: 900;
+  color: rgb(18, 41, 63);
+ 
+  border-radius: 15px;
+  display: inline;
+  text-align: top;
+  margin: 10px;
+  background-image: linear-gradient(to right, rgb(43, 223, 214)   0%, rgb(126, 231, 235)80%);
+  cursor: pointer;
+}
 
-
- button {
+ button:hover{
     outline: none;
-    border: 10px solid #33df6c;
+    border: 10px solid #07ffd6;
     font-size: 50px;
     font-family: 'Arvo'  ;
     line-height: 2;
     font-weight: 900;
-    color: yellow;
-    text-shadow: 3px 0 #DBEDF3;
+    color: rgb(102, 250, 134);
+   
     border-radius: 15px;
     display: inline;
    
     text-align: top;
     margin: 10px;
-    background-image: linear-gradient(to right, purple   0%, rgb(235, 126, 235) 80%);
+    background-image: linear-gradient(to right, rgb(69, 77, 146)   0%, rgb(126, 155, 235) 80%);
     cursor: pointer;
   }
-  button:hover {
-    outline: none;
-    border: 10px solid #185f30;
-    font-size: 50px;
-    font-family: 'Arvo'  ;
-    line-height: 2;
-    font-weight: 900;
-    color: rgb(63, 63, 18);
-    text-shadow: 3px 0 #DBEDF3;
-    border-radius: 15px;
-    display: inline;
-    text-align: top;
-    margin: 10px;
-    background-image: linear-gradient(to right, rgba(43, 223, 43, 0.788)   0%, rgb(235, 215, 126) 80%);
-    cursor: pointer;
-  }
+
  #intro{
    font-family: Arial, Helvetica, sans-serif;
    font-size: larger;
    text-align: center;
+ }
+ #HCB_comment_box{
+   width: 75%;
  }
